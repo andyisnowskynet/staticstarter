@@ -1,0 +1,18 @@
+!!! Strict
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}/
+    = csrf_meta_tag
+    %title= "Static Starter"
+    %script{:type => "text/javascript", :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"}
+    = javascript_include_tag "rails", "application"
+    = stylesheet_link_tag 'normalize', 'styles'
+    != google_analytics_script
+  %body
+    .wrapper
+      .header
+        = link_to "Static Starter", root_path, :class => "logo"
+      .content= yield
+    .footer
+      %p
+        %span.copyright!= "&copy; #{Time.now.year} Static Starter"
