@@ -14,5 +14,4 @@
         = link_to "Static Starter", root_path, :class => "logo"
       .content= yield
       .footer
-        %p
-          %span.copyright!= "&copy; #{Time.now.year} Static Starter"
+        %p!= "&copy; #{Time.now.year} Static Starter"
